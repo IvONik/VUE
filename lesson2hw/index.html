@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW</title>
+  </head>
+  <body>
+
+    <div id="app">   
+        
+            <h3>задача1</h3>
+            <p> Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и отобразиться в обратном порядке.</p>                       
+            <p><button @click="reverseStr()">{{string}}</button></p>
+
+            <h3>задача2</h3>
+            <p>Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить".</p>
+            <p>*Дополнительное задание: При клике на элемент списка он должен быть удален. (по желанию)</p>
+            <li v-for="item in items">{{ item }}</li>
+            <p><button @click="addItem()">Добавить</button></p>
+            <p><button @click="deleteItem()">Удалить</button></p>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const HelloVueApp = {
+        data() {
+          return {
+            string: "перевернуть",
+            items:['Item 1', 'Item 2', 'Item 3'],
+            newItem: 'Новый элемент списка'
+          };
+        },
+        methods: {
+            reverseStr() {
+                this.string = this.string.split('').reverse().join('')
+            },
+            addItem(){
+                this.items.push(this.newItem)
+            },
+            deleteItem(){
+                this.items.pop()
+            }
+        },
+      };
+      Vue.createApp(HelloVueApp).mount("#app"); 
+    </script>
+  </body>
+</html>
