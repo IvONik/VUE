@@ -1,8 +1,9 @@
 @import 'vars';
+// @import 'base';
 .top{
     // width: $widhtSite;      
     height: 758px;
-    background-image: url(img/banner.jpg);
+    background-image: url(img/banner.png);
     background-repeat: no-repeat;
     background-position: center;
     
@@ -53,7 +54,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 8px;
+        //gap: 8px;
         margin-bottom: 93px;
     
         &__title{
@@ -110,17 +111,19 @@
     
 }
 .quantity{        
-    background-color: #F4F0EC;
+    background-color: $colorMain;
     // height: 457px;
     padding-top: 151px;
     padding-bottom: 200px;
     box-sizing: border-box; 
     margin-bottom: 96px;    
         &__box{
-            display: flex;            
-            justify-content: space-between;
-            flex-wrap: wrap;
-            max-width: 1080px;
+            // display: flex;            
+            // justify-content: space-between;
+            // flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));            
+            // max-width: 1080px;
             gap: 75px; 
         }
         &__item{
@@ -136,6 +139,7 @@
         }
 }    
 .news{
+    
     &__box{
         text-align: center;
         gap: 12px;
@@ -153,6 +157,8 @@
         display: grid;  
         grid-template-columns: repeat(auto-fit, minmax(382px, 1fr));
         gap: 27px;
+        margin-left: auto;
+        margin-right: auto;
         &__item{
             width: 382px;
             height: 521px;
@@ -161,6 +167,9 @@
             border-radius: 62px;
             border: 1px solid #E7E7E7;
             box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+                &__color{
+                    background-color: #c73535;
+                }
             &__title{
                 @include titleStyle;
                 font-size: 25px;
@@ -171,7 +180,10 @@
             //     background-color: #F4F0EC;
             //     overflow: hidden;
             // }
-        }  
+        } 
+        &__item:hover{
+            background-color: $colorMain;
+        } 
         &__option  {
             display: flex;
             justify-content: space-between;
@@ -183,6 +195,7 @@
         }
     }
 }
+
 
 @media screen and (max-width: 1154px){
 .center{

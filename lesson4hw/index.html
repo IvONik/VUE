@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW</title>
+  </head>
+  <body>
+
+    <div id="app">   
+        <p>
+            Вы разрабатываете приложение для отображения и сортировки списка товаров. <br>
+            У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой.<br>
+            Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию).
+        </p>
+        
+        <div v-for="(item, index) in products" :key="index">name: {{item.name}}, price: {{item.price}}</div>
+        <div>
+            <button @click="sortMinPrice()">показать сначала дешевые</button>
+            <button @click="sortMaxPrice()">показать сначала дорогие</button>
+        </div>
+            
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const HelloVueApp = {
+        data() {
+          return {
+           products: [
+            {
+                name: 'apple',
+                price: 120,
+            },
+            {
+                name: 'orange',
+                price:100,
+            },
+            {
+                name:'milk',
+                price: 90,
+            },
+            {
+                name:'bread',
+                price:50,
+            },
+           ]
+          };
+        },
+        methods: {
+            sortMinPrice(){
+                this.products.sort(function (a, b) {
+                    if (a.price > b.price) {
+                        return 1;
+                    }
+                    if (a.price < b.price) {
+                        return -1;
+                    }                    
+                    return 0;
+                    })                
+            },
+            sortMaxPrice(){
+                this.products.sort(function (a, b) {
+                    if (a.price < b.price) {
+                        return 1;
+                    }
+                    if (a.price > b.price) {
+                        return -1;
+                    }
+                    return 0;
+                    })                
+            },
+        },
+      };
+      Vue.createApp(HelloVueApp).mount("#app"); 
+    </script>
+  </body>
+</html>
