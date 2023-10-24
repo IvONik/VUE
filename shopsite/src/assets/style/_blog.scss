@@ -7,8 +7,7 @@
 }
 .articles{
    
-        // display: grid;
-        // grid-template-columns: 23fr 1fr;
+        
     &__block{
         &__title{
             @include titleStyle;

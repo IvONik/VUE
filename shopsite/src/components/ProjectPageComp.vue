@@ -18,7 +18,7 @@
                     <div v-if="currentTag==='Bathroom'"><ProjectBathroom/></div>
                     <div v-if="currentTag==='Kitchen'"><ProjectKitchen/> </div>
                     <div v-if="currentTag==='Living Area'"><ProjectLivingArea/></div>
-                
+                    <div v-if="currentTag==='favorite'"><ProjectFavorite/></div>
     
              
 </template>
@@ -29,6 +29,7 @@ import ProjectBedroom from './ProjectBedroom.vue';
 import ProjectBathroom from './ProjectBathroom.vue';
 import ProjectKitchen from './ProjectKitchen.vue';
 import ProjectLivingArea from './ProjectLivingArea.vue';
+import ProjectFavorite from './ProjectFavorite.vue';
 
 
 export default {
@@ -46,7 +47,7 @@ export default {
     mounted() {
     },
     methods: {},
-    components: { ProjectBedroom, ProjectBathroom, ProjectKitchen, ProjectLivingArea },
+    components: { ProjectBedroom, ProjectBathroom, ProjectKitchen, ProjectLivingArea, ProjectFavorite },
     computed:{
                 
     }

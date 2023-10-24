@@ -1,15 +1,20 @@
 <template>
-    <div>
-        <ProjectBedroom v-for="item in items" :key="item.id"/>
+    <div class="center">
+        здесь должны быть любимые проекты
+        <!-- <BedroomComp v-for="item in favoriteArray" :key="item.id" :item="item" /> -->
+        <ProjectBedroom v-for="item in favoriteArray" :key="item.id" :item="item"/>
     </div>
 </template>
 
 <script>
+import BedroomComp from './BedroomComp.vue';
 import ProjectBedroom from './ProjectBedroom.vue';
 
 export default {
     name: 'VueProjectFavorite',
-    props: Object,
+    props: {
+        item: Object,
+    },
     data() {
         return {
             
@@ -24,7 +29,8 @@ export default {
         
     },
     components:{
-    ProjectBedroom
+        BedroomComp,
+        ProjectBedroom
 }
 };
 </script>
