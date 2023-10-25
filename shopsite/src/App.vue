@@ -73,6 +73,8 @@
   <FooterComp/>
   <HeaderComp/> 
   <ProjectPageComp/>
+  <ProjectDetailsComp/>
+  <FooterComp/>
 
 </template>
 
@@ -85,6 +87,7 @@ import Cart from './components/Cart.vue';
 import AtriclesNews from './components/AtriclesNews.vue';
 import BlogComp from './components/BlogComp.vue';
 import ProjectPageComp from './components/ProjectPageComp.vue';
+import ProjectDetailsComp from './components/ProjectDetails.Comp.vue';
 
 export default {
   name: 'App',
@@ -97,6 +100,7 @@ export default {
     AtriclesNews,
     BlogComp,
     ProjectPageComp,
+    ProjectDetailsComp
 }
 }
 </script>
