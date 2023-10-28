@@ -1,0 +1,55 @@
+@import 'vars';
+@import 'base';
+.top__img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+.articles{
+   
+        
+    &__block{
+        &__title{
+            @include titleStyle;
+            font-size: 50px;
+            margin-bottom: 11px;
+        }
+        &__date{
+            @include paragrafStyle;       
+            font-size: 16px;
+            margin-top: 46px;
+            margin-bottom: 48px;
+        }
+        &__text{
+            @include paragrafStyle;       
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+    }
+    &__tag{
+        display: flex;
+        gap: 15px;  
+        margin-bottom: 20px;  
+             
+
+        &__title{
+        @include titleStyle;
+        font-size: 25px;
+        margin-bottom: 11px;
+        }
+        &__button{
+            border-radius: 10px;
+            background: $colorMain;
+            display: flex;
+            padding: 9px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        &__button:hover{
+            background: $colorTitle;
+            color: white;            
+            transition: 0.5s;
+        }
+    }
+}

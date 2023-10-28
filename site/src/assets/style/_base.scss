@@ -1,0 +1,99 @@
+@import 'vars';
+
+*{
+    padding: 0;
+    margin: 0;   
+    box-sizing: border-box; 
+}
+a{
+    text-decoration: none;    
+    color: #666;  
+}
+.center{
+    // width: max-width $widhtSite ;
+    
+    padding-left: calc(50% - $widhtSite/2);
+    padding-right: calc(50% - $widhtSite/2);
+}
+.nav{
+    // width: max($widhtSite-30px );
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 53px;
+    padding-bottom: 53px;
+        &__left{
+            @include locСontent;
+            @include titleStyle;
+            font-size: 34px;   
+                &__logo{
+                    @include titleStyle;
+                    font-size: 40px;
+                }   
+        }        
+        &__right{
+            @include locСontent;
+            @include paragrafStyle;
+            font-size: 25px;          
+        }
+}
+.footer{
+    margin-top: 96px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
+    text-align: center;
+    margin-bottom: 134px;
+    
+    &__left{
+
+        &__logo{
+            @include titleStyle;
+            font-size: 40px;
+            margin-bottom: 18px;
+        }
+        &__text{
+            @include paragrafStyle;
+            font-size: 22px;
+            margin-bottom: 31px;
+            max-width: 382px;
+        }
+        &__icons{
+            display: flex;
+            gap: 54px;
+            justify-content: center;
+            
+        }
+    }
+    &__middle{
+
+        &__title{
+            @include titleStyle;
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+        &__text{
+            @include paragrafStyle;
+            font-size: 22px;
+            max-width: 382px;
+            margin-bottom: 31px;
+            max-width: 382px;
+        }
+    }
+    &__right{
+
+        &__title{
+            @include titleStyle;
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+        &__text{
+            @include paragrafStyle;
+            font-size: 22px;
+            margin-bottom: 31px;
+            max-width: 382px;
+            max-width: 382px;
+        }
+    }
+}
