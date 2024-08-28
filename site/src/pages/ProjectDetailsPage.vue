@@ -1,5 +1,4 @@
 <template>
-    <HeaderComp/>
     <div class="topHead center">
         <img :src="ImageMainProjectDetails" alt="project">
     </div>
@@ -9,16 +8,11 @@
        
     </div>
     <SwiperComp/>
-    <FooterComp/>
 </template>
 
 <script>
 import ImageMainProjectDetails from '@/assets/img/imgMainProjectDet.jpg';
-import HeaderComp from '@/components/HeaderComp.vue';
 import SwiperComp from '@/components/SwiperComp.vue';
-import FooterComp from '@/components/FooterComp.vue';
-
-
 import { mapState } from 'vuex';
 
 export default {
@@ -31,9 +25,7 @@ export default {
     
     methods: {},
     components: { 
-        HeaderComp,
         SwiperComp,
-        FooterComp
      },
     computed:{
         ...mapState(['title', 'text'])

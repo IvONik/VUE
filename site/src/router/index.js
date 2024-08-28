@@ -4,16 +4,18 @@ import ProjectPage from '../pages/ProjectPage.vue'
 import BlogPage from '../pages/BlogPage.vue'
 import ProjectDetailsPage from '../pages/ProjectDetailsPage.vue'
 import NotFound from '../pages/NotFound.vue'
+import SentRequest from "../pages/SentRequest.vue";
+
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomePage,
-  },
+  },  
   {
     path: '/project',
-    name: 'Project',
+    name: 'Projects',
     component: ProjectPage,
   },
   {
@@ -25,6 +27,11 @@ const routes = [
     path: '/project/details',
     name: 'details',
     component: ProjectDetailsPage,
+  },
+  {
+    path: '/sentrequest',
+    name: 'sentrequest',
+    component: SentRequest,
   },
   {
     path: '/:CatchAll(.*)',
@@ -46,5 +53,10 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0);
+  next();
+});
 
 export default router

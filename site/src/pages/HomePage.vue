@@ -1,6 +1,4 @@
 <template>
- <HeaderComp/> 
-
  <div class="top center">
     <img :src="banner" alt="designUnique">
         <div class="top__content">
@@ -12,7 +10,8 @@
             There are many variations of the passages of lorem Ipsum
             fromavailable, majority.
           </p>
-          <button class="top__content__button">
+          <router-link to="/sentrequest">
+            <button class="top__content__button">
             Get Started
             <svg
               width="19"
@@ -30,6 +29,8 @@
               />
             </svg>
           </button>
+          </router-link>
+          
         </div>
   </div>
 
@@ -73,8 +74,6 @@
   </div>                 
   
   <CartComp/>
-
-  <FooterComp/>
 </template>
 
 <script>
@@ -91,7 +90,7 @@ export default {
   name: 'HomeView',
   data() {
     return {
-      banner: 'banner',
+      banner,
     };
   },
   components: {

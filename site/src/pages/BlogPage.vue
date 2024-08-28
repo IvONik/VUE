@@ -1,8 +1,6 @@
 <template>
-    <HeaderComp/>
     <AtriclesNews/>
 <CartComp/>
-<FooterComp/>
 </template>
 
 <script>
@@ -17,20 +15,12 @@ export default {
     name: 'VueBlogPage',
 
     data() {
-        return {
-            
+        return {            
         };
     },
-
-
-    methods: {
-        
-    },
     components:{
-        HeaderComp,
         AtriclesNews,
         CartComp,
-        FooterComp,
     }
 };
 </script>

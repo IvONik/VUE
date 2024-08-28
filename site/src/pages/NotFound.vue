@@ -1,6 +1,4 @@
 <template>
-    
-        <HeaderComp/>
     <div class="notfound center">
         <div class="notfound__content">
             <h1 class="notfound__title">404</h1>
@@ -37,14 +35,10 @@ export default {
     name: 'VueNotFound',
 
     data() {
-        return {
-            
+        return {            
             img: img,
         };
     },
-    components:{
-        HeaderComp
-    }
     };      
 </script>
 

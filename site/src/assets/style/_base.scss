@@ -4,19 +4,20 @@
     padding: 0;
     margin: 0;   
     box-sizing: border-box; 
+    font-family: $paragrafFont;
+}
+.body{
+    height: 100vh;
 }
 a{
     text-decoration: none;    
     color: #666;  
 }
 .center{
-    // width: max-width $widhtSite ;
-    
     padding-left: calc(50% - $widhtSite/2);
     padding-right: calc(50% - $widhtSite/2);
 }
 .nav{
-    // width: max($widhtSite-30px );
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -35,65 +36,76 @@ a{
         &__right{
             @include locСontent;
             @include paragrafStyle;
-            font-size: 25px;          
+            font-size: 25px; 
+            gap: 16px;        
         }
 }
-.footer{
-    margin-top: 96px;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
+.footer {
+    display: flex;
+    justify-content: space-between;
     text-align: center;
-    margin-bottom: 134px;
-    
-    &__left{
-
-        &__logo{
-            @include titleStyle;
-            font-size: 40px;
-            margin-bottom: 18px;
-        }
-        &__text{
-            @include paragrafStyle;
-            font-size: 22px;
-            margin-bottom: 31px;
-            max-width: 382px;
-        }
-        &__icons{
-            display: flex;
-            gap: 54px;
-            justify-content: center;
-            
-        }
+    margin-top: 96px;
+    margin-bottom: 16px;
+  
+    &__part {
+      flex-grow: 1;
+      max-width: 300px;
     }
-    &__middle{
+  
+    &__part { 
+      &__logo {
+        @include titleStyle;
+        font-size: 40px;
+        margin-bottom: 18px;
+      }
+  
+      &__text {
+        @include paragrafStyle;
+        font-size: 22px;
+        margin-bottom: 31px;
+      }
+  
+      &__icons {
+        display: flex;
+        gap: 54px;
+        justify-content: center;
+      }
 
-        &__title{
-            @include titleStyle;
-            font-size: 25px;
-            margin-bottom: 18px;
-        }
-        &__text{
-            @include paragrafStyle;
-            font-size: 22px;
-            max-width: 382px;
-            margin-bottom: 31px;
-            max-width: 382px;
-        }
+      &__title {
+        @include titleStyle;
+        font-size: 25px;
+        margin-bottom: 18px;
+      }
     }
-    &__right{
-
-        &__title{
-            @include titleStyle;
-            font-size: 25px;
-            margin-bottom: 18px;
-        }
-        &__text{
-            @include paragrafStyle;
-            font-size: 22px;
-            margin-bottom: 31px;
-            max-width: 382px;
-            max-width: 382px;
-        }
-    }
-}
+  
+    // &__middle {
+    //   /* Стили для средней части */
+    //   &__title {
+    //     @include titleStyle;
+    //     font-size: 25px;
+    //     margin-bottom: 18px;
+    //   }
+  
+    //   &__text {
+    //     @include paragrafStyle;
+    //     font-size: 22px;
+    //     margin-bottom: 31px;
+    //     max-width: 382px;
+    //   }
+    // }
+  
+    // &__part {
+    //   &__title {
+    //     @include titleStyle;
+    //     font-size: 25px;
+    //     margin-bottom: 18px;
+    //   }
+  
+    //   &__text {
+    //     @include paragrafStyle;
+    //     font-size: 22px;
+    //     max-width: 382px;
+    //   }
+    // }
+  }
+  

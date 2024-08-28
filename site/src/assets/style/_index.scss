@@ -3,11 +3,8 @@
 .top{
          
     height: 758px;
-    // background-image: url('./assets/img/banner.png');
     background-repeat: no-repeat;
     background-position: center;
-    
-    // position: relative;
     border-radius: 50px;
     overflow: hidden;
     margin-bottom: 96px;
@@ -17,7 +14,6 @@
         padding-left: 58px;
         position: absolute;
         top: 0px;
-        
     
         &__title{
             @include titleStyle;
